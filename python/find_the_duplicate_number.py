@@ -1,7 +1,7 @@
 from typing import List
 
 def findDuplicate(nums: List[int]) -> int:
-    slow = fast = 0
+    slow , fast = nums[0], nums[nums[0]]
     base = 0
     # first detect the cycle (think the list as a linked one, values contained in the index are the “next” node)
     while fast != slow:
